@@ -668,7 +668,7 @@ void diskDriverBody(void *args){
             if (request->option == 2){
                 // verifica se ocorreu algum erro na escrita
                 if (disk_cmd(DISK_CMD_WRITE, request->block, request->buffer) < 0){
-                   // printf(stderr, "ERRO: Escrita do bloco: %d\n", request->block);
+                	fprintf(stderr, "ERRO: Escrita do bloco: %d\n", request->block);
                 }
             }
 
