@@ -675,7 +675,7 @@ void diskDriverBody(void *args){
             // atende o pedido seguindo FCFS
             queue_remove((queue_t **)&disk->next, (queue_t *)request);
             queue_append((queue_t **)&disk->prev, (queue_t *)request);
-            request->option = 4;
+            
         }
     }
 
