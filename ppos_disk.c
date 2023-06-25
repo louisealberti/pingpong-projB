@@ -10,6 +10,7 @@
 int disk_mgr_init (int *numBlocks, int *blockSize){
 	
 	//task que sera chamada a cada sinal
+	// mover para uma funcao propria
 	sigDisk.sa_handler = diskSignalAction; 
 	sigemptyset (&sigDisk.sa_mask);
 	sigDisk.sa_flags = 0 ;
