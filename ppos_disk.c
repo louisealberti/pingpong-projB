@@ -8,7 +8,7 @@
 
 // gerenciadora da inicializacao de disco
 int disk_mgr_init (int *numBlocks, int *blockSize){
-	printf("HELLLLLLLLLLLLO");
+	
 	//task que sera chamada a cada sinal
 	sigDisk.sa_handler = diskSignalAction; 
 	sigemptyset (&sigDisk.sa_mask);
