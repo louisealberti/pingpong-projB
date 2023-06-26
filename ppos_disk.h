@@ -18,15 +18,14 @@
 typedef struct
 {
   // completar com os campos necessarios
-  struct disk_t *prev, *next;
-	int	block;
-	void *buffer;
-	int option; // 1- leitura de bloco do disco ou 2	- escrita de bloco do disco
-	struct task_t *task;
+ int sizeBlocks; // Tamanho dos blocos
+  	int qtdBlocks; // Quantidade de blocos
+  	int signal; // sinal para acordar o disco
 
-	int	handler;
+	struct request_t* reqQueue; // fila de requisicoes do disco
+	task_t* waitQueue; // fila tarefas em espera do disco
 
-	semaphore_t *semaphore;
+	semaphore_t semaphore; // semaforo para acessar o disco
 } disk_t ;
 
 // inicializacao do gerente de disco
