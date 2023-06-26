@@ -127,6 +127,40 @@ static void diskDriverBody(void * args){
 } // end of diskDriverBody
 
 // ****************************************************************************
+// ESCALONADOR
+ 
+// Politica de escalonamento First Come, First Served 
+request_t* fcfs(){
+    
+	request_t* iterator = NULL;
+
+	int count = 0;
+	int tam = queue_size((queue_t*)disk.reqQueue);
+
+    return disk.reqQueue;
+}
+
+// Politica de escalonamento Shortest Seek-Time First
+request_t* sstf(){
+	int temp;
+
+	request_t* iterator = disk.reqQueue;
+
+	int count = 0;
+    int tam = queue_size((queue_t*)disk.reqQueue);
+    
+    }
+
+// Politica de escalonamento Circular Scan
+request_t* cscan(){
+    
+}
+
+int diskScheduler(){
+	
+}
+
+// ****************************************************************************
 // FUNCOES DO ppos_disk.h
 
 // inicializa do gerente de disco
